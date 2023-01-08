@@ -37,17 +37,17 @@
 <div class="panel">
 <form>
   <label>
-    <input type="checkbox" name="languages" value="HTML">
+    <input type="checkbox" onclick="checkFluency()" name="languages" value="HTML">
     Хочу изучать HTML
   </label>
   <br>
   <label>
-    <input type="checkbox" name="languages" value="CSS">
+    <input type="checkbox" onclick="checkFluency()" name="languages" value="CSS">
     Хочу изучать CSS
   </label>
   <br>
   <label>
-    <input type="checkbox" name="languages" value="JS">
+    <input type="checkbox" onclick="checkFluency()" name="languages" value="JS">
     Хочу изучать JS
   </label>
 </form>
@@ -102,12 +102,14 @@ for (i = 0; i < acc.length; i++) {
    let btn = document.getElementsByName("languages");
    let arr_tg = [];  
     
-    
-   btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
+   functioncheckFluency()
+    {let btn = document.getElementsByName("languages");
+   let arr_tg = []; 
        if(checkbox.checked!=true){
         tg.MainButton.show();
-       arr_tg.push("Груша");}
-   });
+       arr_tg.push("Груша");}} 
+
+  
    
    
 
