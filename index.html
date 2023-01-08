@@ -75,7 +75,7 @@ var i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
-        tg.MainButton.show();
+        
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         if (panel.style.display === "block") {
@@ -105,7 +105,7 @@ for (i = 0; i < acc.length; i++) {
     
    btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
        if(checkbox.checked!=true){
-tg.MainButton.show();
+        tg.MainButton.show();
        arr_tg.push("Груша");}
    });
    
