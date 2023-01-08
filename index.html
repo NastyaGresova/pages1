@@ -64,11 +64,18 @@
 </div>
 
 <script>
+    let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
+
+   tg.expand(); //расширяем на все окно  
+   tg.MainButton.textColor = "#FFFFFF";
+   tg.MainButton.color = "#2cab37";
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
+        tg.MainButton.show();
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         if (panel.style.display === "block") {
