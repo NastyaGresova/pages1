@@ -102,12 +102,26 @@ for (i = 0; i < acc.length; i++) {
    let btn = document.getElementsByName("languages");
    let arr_tg = [];  
     
-   functioncheckFluency()
-    {let btn = document.getElementsByName("languages");
-   let arr_tg = []; 
-       if(checkbox.checked!=true){
-        tg.MainButton.show();
-       arr_tg.push("Груша");}} 
+    
+    
+  var checkbox = document.getElementsByName("languages");
+
+  if ("onpropertychange" in checkbox) 
+   tg.MainButton.show();
+       arr_tg.push("Груша");}} {
+   
+    checkbox.onpropertychange = function() {
+     
+      if (event.propertyName == "checked") {
+        alert( checkbox.checked );
+      }
+    };
+  } else {
+
+    checkbox.onchange = function() {
+      alert( checkbox.checked );
+    };
+  }
 
   
    
